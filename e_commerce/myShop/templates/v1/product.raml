@@ -1,0 +1,842 @@
+#%RAML 1.0
+title: E-Commerce Product API
+version: v1
+baseUri: http://localhost:8000/api/{version}
+mediaType: application/json
+
+description: 1.Product Management (CRUD)
+/products:
+  get:
+    description: List all products
+    queryParameters:
+      id:
+        description: unique identifier of a product in database
+        type: number     
+      name:
+        description: name of the corresponding product
+        type: string
+      description:
+        description: the entire product desription 
+        type: string    
+      Price:
+        description: Price of product
+        type: number
+      category:
+        description: the name and id of category a product is belong too
+        type: dictionary
+      category:
+        description: the image address of a product 
+        type: string
+      stock_quantity:
+        description: the number of unit of a product
+        type: number
+      Review:
+        description: feedback provided by a user or customer about a product
+        type: dictionary
+      images:
+        description: Images related to the corresponding product
+        type: string
+      ctreated_date:
+        description: indicate when a product has been recorded
+        type: string
+    responses:
+      200:
+        body:
+          application/json:
+            example: |
+              [
+                {
+
+                  "id": 1,
+                  "name": "JUST RIDER Men's Gym Shorts/mens sports shorts/running shorts for men",
+                  "description": "Suitable for any circumstance.Good choice for indoor and outdoor activities.Such as Walking,Running,Gym,Traveling,Mountaineering,Hiking or at Home,etc",
+                  "price": "12000.00",
+                  "category": 
+                    {
+                      "id": 6,
+                      "name": "Sports, Fitness, Bags, Luggage"
+                    },
+                  "image_url": "https://m.media-amazon.com/images/I/6120wM2Z+-L._SY879_.jpg",
+                  "stock_quantity": 5,
+                  "reviews": 
+                    [
+
+                       {
+                         "id": 1,
+                         "user": 1,
+                         "product": 1,
+                         "rating": 4,
+                         "comment": "Nziza cyane",
+                         "created_at": "2024-10-12T12:51:39.966398Z"
+                        }
+                    ],
+                  "images": 
+                    [
+
+                        {
+                          "id": 1,
+                          "product": 1,
+                          "image_url": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/8e081c80-d12e-4655-bbbf-eb6aa6b81479.__CR0,0,1080,1080_PT0_SX300_V1___.png"
+                        },
+                        {
+                          "id": 2,
+                          "product": 1,
+                          "image_url": "https://m.media-amazon.com/images/I/71lgOm5F8sL._SX679_.jpg"
+                        },
+                        {                        
+                          "id": 3,
+                          "product": 1,
+                          "image_url": "https://m.media-amazon.com/images/I/513R2m39cEL._SY879_.jpg"
+                        },
+                        {
+                          "id": 4,
+                          "product": 1,
+                          "image_url": "https://m.media-amazon.com/images/I/61jyIVEVtiL._SX679_.jpg"
+                        }
+                    ],
+                  "created_date": "2024-10-12T12:12:35.323105Z"
+                },
+                {
+                  "id": 3,
+                  "name": "SLOVIC Swimming Shorts for Men | Swimming Costume for Men | Swimming Trunk, Boys Swim Suit for Men Easy Adjustable, Breathable, Quick Drying Shorts for Swimming, Running Sports Shorts",
+                  "description": "100% CHLORINE RESISTANT: Made of poly spandex fabric, Slovic Swimming Trunks are designed to reduce friction and protect you from pool chemicals.",
+                  "price": "12000.00",
+                  "category": 
+                    {
+                      "id": 6,
+                      "name": "Sports, Fitness, Bags, Luggage"
+                    },
+                  "image_url": "https://m.media-amazon.com/images/I/717uG2jo9yL._SX679_.jpg",
+                  "stock_quantity": 16,
+                  "reviews": [],
+                  "images": [],
+                  "created_date": "2024-10-12T12:23:09.859504Z"
+                },
+                {
+                  "id": 4,
+                  "name": "Samsung Galaxy M55s 5G (Coral Green,8GB RAM,128GB Storage)",
+                  "description": "DISPLAY - 16.95 Centimeters (6.7\"Inch) Super AMOLED Plus Display with 19.5:9 Aspect Ratio, FHD+ Resolution with 1080 x 2400 Pixels , 394 PPI with 16M Colors and 120Hz Refresh Rate",
+                  "price": "345000.00",
+                  "category": 
+                    {
+                      "id": 5,
+                      "name": "Mobiles, Laptops"
+                    },
+                  "image_url": "https://m.media-amazon.com/images/I/41iXRIjYK5L._SX300_SY300_QL70_FMwebp_.jpg",
+                  "stock_quantity": 22,
+                  "reviews": 
+                    [
+                      {
+                        "id": 2,
+                        "user": 3,
+                        "product": 4,
+                         "rating": 5,
+                         "comment": "narayiguze narayiguzw narayiguzw a arayiguze narayiguzw narayiguzwrayiguze narayiguzw narayiguzw arayiguze narayiguzw narayiguzw arayiguze narayiguzw narayiguzw arayiguze narayiguzw narayiguzw",
+                         "created_at": "2024-10-12T13:01:56.567341Z"
+                      }
+                    ],
+                  "images": [],
+                  "created_date": "2024-10-12T12:26:25.734988Z"
+                },
+                {
+                  "id": 5,
+                  "name": "Spigen Ez Fit Tempered Glass Screen Protector Guard For Iphone 15 Pro Smartphone - 2 Pack",
+                  "description": "Compatibility ; Glass Screen Protector Compatible with iPhone 15 Pro\r\n9H Hardness ; Tempered glass durability rated at 9H hardness to protect from everyday scratches\r\nCase Friendly ; Made case compatible with Spigen case\r\nOil-free ; Oleophobic coating for daily fingerprint resistance\r\nCrystal Clear ; Extreme clarity preserves the original screen brightness",
+                  "price": "10000.00",
+                  "category": 
+                    {
+                      "id": 5,
+                      "name": "Mobiles, Laptops"
+                    },
+                  "image_url": "https://m.media-amazon.com/images/I/71dDhHnvNEL._SX679_.jpg",
+                  "stock_quantity": 24,
+                  "reviews": [],
+                  "images": [],
+                  "created_date": "2024-10-12T12:29:44.719726Z"
+                }
+              ]
+
+  post:
+    description: Create a new product
+    body:
+      application/json:
+        type: object
+        properties:
+          name:
+            type: string
+          description:
+            type: string
+          price:
+            type: number
+          category:
+            type: string
+          stock_quantity:
+            type: number
+          image_url:
+            type: string
+    responses:
+      201:
+        body:
+          application/json:
+            example: |
+
+              {
+                "id": 15,
+                "name": "hello",
+                "description": "hello bb",
+                "price": "23.00",
+                "category": 
+                  {
+                    "id": 3,
+                    "name": "Men's fashion"
+                   },
+                "image_url": null,
+                "stock_quantity": 5,
+                "reviews": [],
+                "images": [],
+                "created_date": "2024-10-13T14:48:38.768706Z"
+              }
+
+  /{productId}:
+    
+    get:
+      description: Retrieve a single product by ID
+      responses:
+        200:
+          body:
+            application/json:
+              example: |
+                {
+
+                  "id": 1,
+                  "name": "JUST RIDER Men's Gym Shorts/mens sports shorts/running shorts for men",
+                  "description": "Suitable for any circumstance.Good choice for indoor and outdoor activities.Such as Walking,Running,Gym,Traveling,Mountaineering,Hiking or at Home,etc",
+                  "price": "12000.00",
+                  "category": 
+                    {
+                      "id": 6,
+                      "name": "Sports, Fitness, Bags, Luggage"
+                    },
+                  "image_url": "https://m.media-amazon.com/images/I/6120wM2Z+-L._SY879_.jpg",
+                  "stock_quantity": 5,
+                  "reviews": 
+                    [
+                      {
+                        "id": 1,
+                        "user": 1,
+                        "product": 1,
+                        "rating": 4,
+                        "comment": "Nziza cyane",
+                         created_at": "2024-10-12T12:51:39.966398Z"
+                      }
+                    ],
+                  "images": 
+                    [
+                      {
+                        "id": 1,
+                        "product": 1,
+                        "image_url": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/8e081c80-d12e-4655-bbbf-eb6aa6b81479.__CR0,0,1080,1080_PT0_SX300_V1___.png"
+                      },
+                        {
+                        "id": 2,
+                        "product": 1,
+                        "image_url": "https://m.media-amazon.com/images/I/71lgOm5F8sL._SX679_.jpg"
+                      },
+                      {                        
+                        "id": 3,
+                        "product": 1,
+                        "image_url": "https://m.media-amazon.com/images/I/513R2m39cEL._SY879_.jpg"
+                      },
+                      {
+                        "id": 4,
+                        "product": 1,
+                        "image_url": "https://m.media-amazon.com/images/I/61jyIVEVtiL._SX679_.jpg"
+                      }
+                    ],
+                  "created_date": "2024-10-12T12:12:35.323105Z"
+                }
+
+    put:
+      description: Update a product details
+      body:
+        application/json:
+          type: object
+          properties:
+            name:
+              type: string
+            description:
+              type: string
+            price:
+              type: integer
+            category:
+              type: string
+            stock_quantity:
+              type: integer
+            image_url:
+              type: string
+      responses:
+        200:
+          body:
+            application/json:
+              example: |
+                {
+                  "id": 1,
+                  "name": "Updated Product 1",
+                  "description": "A newly updated product",
+                  "price": 49.99,
+                  "category": "Electronics",
+                  "stock_quantity": 90,
+                  "image_url": "https://alx.com/product1.jpg"
+                }
+
+    delete:
+      description: Delete a product by ID
+      responses:
+        204:
+
+description: 2.Review management (CRUD)
+           
+/reviews/:
+  get:
+    description: List all products
+    queryParameters:
+      id:
+        description: unique identifier of a review in database
+        type: integer     
+      User_id:
+        description: unique identifier assigned to a user in a database
+        type: integer
+      product_id:  
+        description: unique identifier assigned to a product in a database 
+        type: integer    
+      rating:
+        description: Represent user rating for a products(number between 1 and 5)
+        type: integer
+      comment:
+        description: user's comment or review for a product
+        type: text
+      created_at:
+        description: the image address of a product 
+        type: string
+      stock_quantity:
+        description: the number of unit of a product
+        type: number
+      Review:
+        description: feedback provided by a user or customer about a product
+        type: dictionary
+      images:
+        description: Images related to the corresponding product
+        type: string
+      ctreated_date:
+        description: represents the timestamps indicating when a particular record was created in database
+        type: string
+    responses:
+      200:
+        body:
+          application/json:
+            example: |
+              [
+                {
+                  "id": 1,
+                  "user": 1,
+                  "product": 1,
+                  "rating": 4,
+                  "comment": "Nziza cyane",
+                  "created_at": "2024-10-12T12:51:39.966398Z"
+                },
+                {
+                  "id": 2,
+                  "user": 3,
+                  "product": 4,
+                  "rating": 5,
+                  "comment": "narayiguze narayiguzw narayiguzw a arayiguze narayiguzw narayiguzwrayiguze narayiguzw narayiguzw arayiguze narayiguzw narayiguzw arayiguze narayiguzw narayiguzw arayiguze narayiguzw narayiguzw",
+                  "created_at": "2024-10-12T13:01:56.567341Z"
+                }
+              ]
+
+  post:
+    description: Create a review
+    body:
+      application/json:
+        type: object
+        properties:
+          product:
+            type: integer
+          rating:
+            type: integer
+          comment:
+            type: text
+
+    responses:
+      201:
+        body:
+          application/json:
+            example: |
+              {
+                "id": 1,
+                "user": 1,
+                "product": 1,
+                "rating": 4,
+                "comment": "Nziza cyane",
+                "created_at": "2024-10-12T12:51:39.966398Z"
+              }
+
+  /reviews/{id}:
+    get:
+      description: Retrieve a single review by ID
+      responses:
+        200:
+          body:
+            application/json:
+              example: |
+
+                {
+                  "id": 2,
+                  "user": 3,
+                  "product": 4,
+                  "rating": 5,
+                  "comment": "narayiguze narayiguzw narayiguzw a arayiguze narayiguzw narayiguzwrayiguze narayiguzw narayiguzw arayiguze narayiguzw narayiguzw arayiguze narayiguzw narayiguzw arayiguze narayiguzw narayiguzw",
+                  "created_at": "2024-10-12T13:01:56.567341Z"
+                }
+
+    put:
+      description: Update a review details
+      body:
+        application/json:
+          type: object
+          properties:
+            name:
+              type: string
+            description:
+              type: string
+            price:
+              type: integer
+            category:
+              type: string
+            stock_quantity:
+              type: integer
+            image_url:
+              type: string
+      responses:
+        200:
+          body:
+            application/json:
+              example: |
+                {
+                  "id": 2,
+                  "user": 3,
+                  "product": 4,
+                  "rating": 5,
+                  "comment": "good item",
+                  "created_at": "2024-10-12T13:01:56.567341Z"
+                }
+    delete:
+      description: Delete a review by ID
+      responses:
+        204:
+
+
+description: 3.Category Management (CRUD)
+
+/categories/:
+  get:
+    description: List all categories
+    queryParameters:
+      id:
+        description: unique identifier of a category in database
+        type: integer     
+      name:
+        description:  name of a specific category that a product belongs to in a database
+        type: string  
+    responses:
+      200:
+        body:
+          application/json:
+            example: | 
+              [
+                {
+                  "id": 1,
+                  "name": "Home decor"
+                },
+                {
+                  "id": 2,
+                  "name": "Electronics"
+                },
+                {
+                  "id": 3,
+                  "name": "Men's fashion"
+                },
+                {
+                  "id": 4,
+                  "name": "Women's fashion"
+                }
+              ]
+              
+  post:
+    description: Create a category
+    body:
+      application/json:
+        type: object
+        properties:
+          name:
+            type: string
+
+    responses:
+      201:
+        body:
+          application/json:
+            example: |
+              {
+                "id": 7,
+                "name": "Nouriture"
+              }
+
+  /categories{id}:
+    get:
+      description: Retrieve a single category by ID
+      responses:
+        200:
+          body:
+            application/json:
+              example: |
+                {
+                  "id": 1,
+                  "name": "Home decor"
+                }
+                  
+    put:
+      description: Update a category details
+      body:
+        application/json:
+          type: object
+          properties:
+            id:
+              type: integer
+            name:
+              type: string
+            
+      responses:
+        200:
+          body:
+            application/json:
+              example: |
+                {
+                  "id": 7,
+                  "name": "Equipment"
+                }
+                 
+    delete:
+      description: Delete a category by ID
+      responses:
+        204:
+
+description: 4. Wishlist Management 
+/wishlist/:
+  get:
+    description: List all wishlist
+    queryParameters:
+      id:
+        description: unique identifier of a wishlist in database
+        type: integer     
+      user:
+        description:  id  of a specific user who make a wishlist in a database
+        type: integer
+      product:
+         description: unique identifier of a product in database 
+         type:
+      
+    responses:
+      200:
+        body:
+          application/json:
+            example: |              
+              [
+                {
+                  "id": 1,
+                  "user": 1,
+                  "product": 1
+                },
+                {
+                  "id": 2,
+                  "user": 2,
+                  "product": 8
+                }
+              ]              
+  post:
+    description: Create a review
+    body:
+      application/json:
+        type: object
+        properties:
+          user:
+            type: integer
+          product:
+            type: integer
+
+    responses:
+      201:
+        body:
+          application/json:
+            example: |
+              {
+                "id": 3,
+                "user": 1,
+                "product": 3
+              }
+              
+  /wishlist{id}:
+    get:
+      description: Retrieve a single wishlist by ID
+      responses:
+        200:
+          body:
+            application/json:
+              example: |
+                {
+                  "id": 3,
+                  "user": 1,
+                  "product": 3
+                }
+                  
+    put:
+      description: Update a wishlist details
+      body:
+        application/json:
+          type: object
+          properties:
+            id:
+              type: integer
+            user:
+              type: integer
+            product:
+              type: integer
+      responses:
+        200:
+          body:
+            application/json:
+              example: |
+                {
+                  "id": 1,
+                  "user": 1,
+                  "product": 4
+                }
+               
+                 
+    delete:
+      description: Delete a wishlist by ID
+      responses:
+        204:
+
+description: 5. Product-image Management (CRUD)
+/product-images/:
+  get:
+    description: List all product-images
+    queryParameters:
+      id:
+        description: unique identifier of a image_url in database
+        type: integer     
+      product:
+         description: unique identifier of a product in database 
+         type: integer
+      images:
+        description: Images related to the corresponding product
+        type: string
+      
+    responses:
+      200:
+        body:
+          application/json:
+            example: |
+              [
+                {
+                  "id": 1,
+                  "product": 1,
+                  "image_url": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/8e081c80-d12e-4655-bbbf-eb6aa6b81479.__CR0,0,1080,1080_PT0_SX300_V1___.png"
+                },
+                {
+                  "id": 2,
+                  "product": 1,
+                  "image_url": "https://m.media-amazon.com/images/I/71lgOm5F8sL._SX679_.jpg"
+                },
+                {
+                  "id": 3,
+                  "product": 1,
+                  "image_url": "https://m.media-amazon.com/images/I/513R2m39cEL._SY879_.jpg"
+                },
+                {
+                  "id": 4,
+                  "product": 1,
+                  "image_url": "https://m.media-amazon.com/images/I/61jyIVEVtiL._SX679_.jpg"
+                }
+              ]
+                
+  post:
+    description: Create a product-images
+    body:
+      application/json:
+        type: object
+        properties:
+          product:
+            type: integer
+          image_url:
+            type: string
+
+    responses:
+      201:
+        body:
+          application/json:
+            example: |
+                {
+                  "id": 5,
+                  "product": 4,
+                  "image_url": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/8e081c80-d12e-4655-bbbf-eb6aa6b81479.__CR0,0,1080,1080_PT0_SX300_V1___.png"
+                }
+              
+  /product-image{id}:
+    get:
+      description: Retrieve a single product-image by ID
+      responses:
+        200:
+          body:
+            application/json:
+              example: |
+                {
+                  "id": 3,
+                  "product": 1,
+                  "image_url": "https://m.media-amazon.com/images/I/513R2m39cEL._SY879_.jpg"
+                }
+    delete:
+      description: Delete a product-image by ID
+      responses:
+        204:
+
+description: 6. Promotion Management (CRUD)
+/promotions/:
+  get:
+    description: List all promotion
+    queryParameters:
+      id:
+        description: unique identifier of a promotion in database
+        type: integer     
+      product:
+         description: unique identifier of a product in database 
+         type: integer
+      discount_percentage:
+        description: original price of a product  that is reduced during a sale or promotion
+        type: number
+      start_date:
+        description: specific day on which a promotion is scheduled to begin.
+        type: string
+      End_date:
+        description: specific day on which a promotion is scheduled to end.
+        type: string
+        
+      
+    responses:
+      200:
+        body:
+          application/json:
+            example: |
+              [                
+                {
+                  "id": 1,
+                  "product": 1,
+                  "discount_percentage": 10.0,
+                  "start_date": "2024-10-13",
+                  "end_date": "2024-10-24"
+                }                
+              ]
+                
+  post:
+    description: Create a product-images
+    body:
+      application/json:
+        type: object
+        properties:
+          product:
+            type: integer
+          discount_percentage:
+            type: integer
+          start_date:
+            type: string
+          end_date:
+            type: string
+
+    responses:
+      201:
+        body:
+          application/json:
+            example: |
+                {
+                  "id": 2,
+                  "product": 10,
+                  "discount_percentage": 20.0,
+                  "start_date": "2024-10-13",
+                  "end_date": "2024-10-24"
+                }
+                        
+  /promotion{id}:
+    get:
+      description: Retrieve a single promotion by ID
+      responses:
+        200:
+          body:
+            application/json:
+              example: |
+                {
+                  "id": 2,
+                  "product": 10,
+                  "discount_percentage": 20.0,
+                  "start_date": "2024-10-13",
+                  "end_date": "2024-10-24"
+                }
+                
+    delete:
+      description: Delete a promotion by ID
+      responses:
+        204:
+
+description: 7. Stock Management 
+/products/{id}/purchase/:
+  post:
+    description: Reduce stock quantity by purchasing product
+    body:
+      application/json:
+        type: object
+        properties:
+          quantity:
+            type: integer
+    responses:
+      201:
+        body:
+          application/json:
+            example: |
+              {
+                "message": "You have successfully purchased 3 of Samsung Galaxy M55s 5G (Coral Green,8GB RAM,128GB Storage).",
+                "remaining_stock": 4,
+                "product_details": 
+                  {
+                    "id": 4,
+                    "name": "Samsung Galaxy M55s 5G (Coral Green,8GB RAM,128GB Storage)",
+                    "description": "DISPLAY - 16.95 Centimeters (6.7\"Inch) Super AMOLED Plus Display with 19.5:9 Aspect Ratio, FHD+ Resolution with 1080 x 2400 Pixels , 394 PPI with 16M Colors and 120Hz Refresh Rate",
+                    "price": "345000.00",
+                    "category": 
+                      {
+                        "id": 5,
+                        "name": "Mobiles, Laptops"
+                      },
+                    "image_url": "https://m.media-amazon.com/images/I/41iXRIjYK5L._SX300_SY300_QL70_FMwebp_.jpg",
+                    "stock_quantity": 4,
+                    "reviews": [],
+                    "images": 
+                      [
+                        {
+                          "id": 5,
+                          "product": 4,
+                          "image_url": "https://m.media-amazon.com/images/I/61jyIVEVtiL._SX679_.jpg"
+                        }
+                      ],
+                    "created_date": "2024-10-12T12:26:25.734988Z"
+                  }
+              }
+    
