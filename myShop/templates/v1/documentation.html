@@ -536,4 +536,116 @@ pre code {
       "created_date": "2024-10-12T12:26:25.734988Z"
     }
 }
-</code></pre></div><h2>HTTP status code <a href="http://httpstatus.es/400" target="_blank">400</a></h2><p>Bad Request - Invalid purchase request or insufficient stock.</p><h2>HTTP status code <a href="http://httpstatus.es/401" target="_blank">401</a></h2><p>Unauthorized - Authentication credentials were not provided.</p><h2>HTTP status code <a href="http://httpstatus.es/404" target="_blank">404</a></h2><p>Not Found - No Product matches the given query..</p><h2>HTTP status code <a href="http://httpstatus.es/500" target="_blank">500</a></h2><p>Internal Server Error - The server encountered an unexpected condition.</p></div></div></div></div></div></div></div></div></div></div></div><div class="col-md-3"><div id="sidebar" class="hidden-print affix" role="complementary"><ul class="nav nav-pills nav-stacked"><li><a href="#products">/products</a></li><li><a href="#reviews_">/reviews/</a></li><li><a href="#categories_">/categories/</a></li><li><a href="#wishlist_">/wishlist/</a></li><li><a href="#product_images_">/product-images/</a></li><li><a href="#promotions_">/promotions/</a></li><li><a href="#products__id__purchase_">/products/{id}/purchase/</a></li></ul></div></div></div></div></body></html>
+</code></pre></div><h2>HTTP status code <a href="http://httpstatus.es/400" target="_blank">400</a></h2><p>Bad Request - Invalid purchase request or insufficient stock.</p><h2>HTTP status code <a href="http://httpstatus.es/401" target="_blank">401</a></h2><p>Unauthorized - Authentication credentials were not provided.</p><h2>HTTP status code <a href="http://httpstatus.es/404" target="_blank">404</a></h2><p>Not Found - No Product matches the given query..</p><h2>HTTP status code <a href="http://httpstatus.es/500" target="_blank">500</a></h2><p>Internal Server Error - The server encountered an unexpected condition.</p></div></div></div></div></div></div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h3 id="products__search__name__" class="panel-title">/products/?search={name}/</h3></div><div class="panel-body"><div class="panel-group"><div class="panel panel-white resource-modal"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_products__search__name__"><span class="parent"></span>/products/?search={name}/</a> <span class="methods"><a href="#products__search__name___post"><span class="badge badge_post">post</span></a></span></h4></div><div id="panel_products__search__name__" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#products__search__name___post'" class="list-group-item"><span class="badge badge_post">post</span><div class="method_description"><p>Search product by name</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="products__search__name___post"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_post">post</span> <span class="parent"></span>/products/?search={name}/</h4></div><div class="modal-body"><div class="alert alert-info"><p>Search product by name</p></div><ul class="nav nav-tabs"><li class="active"><a href="#products__search__name___post_request" data-toggle="tab">Request</a></li><li><a href="#products__search__name___post_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="products__search__name___post_request"><h3>URI Parameters</h3><ul><li><strong>name</strong>: <em><span class="required">required</span>(string)</em></li></ul><h3>Body</h3><p><strong>Media type</strong>: application/json</p><p><strong>Type</strong>: object</p><strong>Properties</strong><ul><li><strong>name</strong>: <em><span class="required">required</span>(string)</em></li></ul></div><div class="tab-pane" id="products__search__name___post_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Media type</strong>: application/json</p><p><strong>Type</strong>: any</p><p><strong>Example</strong>:</p><div class="examples"><pre><code>{
+  "id": 16,
+  "name": "lamp",
+  "description": "asjdkklmdklml",
+  "price": "12000.00",
+  "category": 
+    {
+      "id": 1,
+      "name": "Home decor"
+    },
+  "image_url": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/PDP-Highlight-Consumer-Laptop-Go-3-Platinum-001:VP1-539x440",
+  "stock_quantity": 20,
+  "reviews": [],
+  "images": [],
+  "created_date": "2024-10-15T10:44:14.498063Z"
+}
+</code></pre></div></div></div></div></div></div></div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h3 id="products__search__category__name_" class="panel-title">/products/?search={category__name}</h3></div><div class="panel-body"><div class="panel-group"><div class="panel panel-white resource-modal"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_products__search__category__name_"><span class="parent"></span>/products/?search={category__name}</a> <span class="methods"><a href="#products__search__category__name__post"><span class="badge badge_post">post</span></a></span></h4></div><div id="panel_products__search__category__name_" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#products__search__category__name__post'" class="list-group-item"><span class="badge badge_post">post</span><div class="method_description"><p>Search product by categories</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="products__search__category__name__post"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_post">post</span> <span class="parent"></span>/products/?search={category__name}</h4></div><div class="modal-body"><div class="alert alert-info"><p>Search product by categories</p></div><ul class="nav nav-tabs"><li class="active"><a href="#products__search__category__name__post_request" data-toggle="tab">Request</a></li><li><a href="#products__search__category__name__post_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="products__search__category__name__post_request"><h3>URI Parameters</h3><ul><li><strong>category__name</strong>: <em><span class="required">required</span>(string)</em></li></ul><h3>Body</h3><p><strong>Media type</strong>: application/json</p><p><strong>Type</strong>: object</p><strong>Properties</strong><ul><li><strong>category__name</strong>: <em><span class="required">required</span>(string)</em></li></ul></div><div class="tab-pane" id="products__search__category__name__post_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Media type</strong>: application/json</p><p><strong>Type</strong>: any</p><p><strong>Example</strong>:</p><div class="examples"><pre><code>{
+  "id": 7,
+  "name": "Fire-Boltt Ninja Call Pro Max 51.05mm (2.01 inch) Display Smart Watch, Bluetooth Calling, 120+ Sports Modes, Health Suite, Voice Assistance (Black)",
+  "description": "51.05mm (2.01 inch) Large display, 240*296 pixels resolution - Style meets technology in perfect harmony. Immerse yourself in the captivating world of the 51.05mm (2.01 inch) large display, and a brilliant resolution of 240*296 pixels. Every detail comes to life with exceptional clarity and vibrancy with 320 NITS Peak Brightness",
+  "price": "435361.00",
+  "category": 
+    {
+      "id": 2,
+      "name": "Electronics"
+    },
+  "image_url": "https://m.media-amazon.com/images/I/61fTfbdaszL._SX679_.jpg",
+  "stock_quantity": 34,
+  "reviews": [],
+  "images": [],
+  "created_date": "2024-10-12T12:35:21.847865Z"
+},
+{
+  "id": 6,
+  "name": "Hisense 108 cm (43 inches) E43N Series Full HD Smart Google LED TV 43E43N (Black)",
+  "description": "Resolution: Full HD (1920X1080) | Refresh Rate: 60 hertz&#92;r&#92;nConnectivity: 3 HDMI ports to connect set top box (1 HDMI port eARC supported) | 2 USB 2.0 ports to connect hard drives and other USB devices | Dual-Band WiFi (2.4G+5G) | Bluetooth 5.0 | 1 Ethernet RJ45 | 1 headphone Jack | 1 Optical Out | 1 Composite (AV) Inputs | 1 RF Tuner",
+  "price": "349000.00",
+  "category": 
+    {
+      "id": 2,
+      "name": "Electronics"
+    },
+  "image_url": "https://m.media-amazon.com/images/I/81ptdkfLeSL._SX679_.jpg",
+  "stock_quantity": 12,
+  "reviews": [],
+  "images": [],
+  "created_date": "2024-10-12T12:33:20.694371Z"
+},
+{
+  "id": 14,
+  "name": "Iphone",
+  "description": "dfklsaldk;k;skad;l dk;kasd;lk;l jd;k;lk;ld",
+  "price": "390777.00",
+  "category": 
+    {
+      "id": 2,
+      "name": "Electronics"
+    },
+  "image_url": null,
+  "stock_quantity": 37,
+  "reviews": [],
+  "images": [],
+  "created_date": "2024-10-13T12:28:38.010879Z"
+}
+</code></pre></div></div></div></div></div></div></div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h3 id="products__price__gte__price__price__lte__price_" class="panel-title">/products/?price__gte={price}&price__lte={price}</h3></div><div class="panel-body"><div class="panel-group"><div class="panel panel-white resource-modal"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_products__price__gte__price__price__lte__price_"><span class="parent"></span>/products/?price__gte={price}&price__lte={price}</a> <span class="methods"><a href="#products__price__gte__price__price__lte__price__post"><span class="badge badge_post">post</span></a></span></h4></div><div id="panel_products__price__gte__price__price__lte__price_" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#products__price__gte__price__price__lte__price__post'" class="list-group-item"><span class="badge badge_post">post</span><div class="method_description"><p>Filter product by price range</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="products__price__gte__price__price__lte__price__post"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_post">post</span> <span class="parent"></span>/products/?price__gte={price}&price__lte={price}</h4></div><div class="modal-body"><div class="alert alert-info"><p>Filter product by price range</p></div><ul class="nav nav-tabs"><li class="active"><a href="#products__price__gte__price__price__lte__price__post_request" data-toggle="tab">Request</a></li><li><a href="#products__price__gte__price__price__lte__price__post_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="products__price__gte__price__price__lte__price__post_request"><h3>URI Parameters</h3><ul><li><strong>price</strong></li></ul><h3>Body</h3><p><strong>Media type</strong>: application/json</p><p><strong>Type</strong>: object</p><strong>Properties</strong><ul><li><strong>price</strong>: <em><span class="required">required</span>(number)</em></li></ul></div><div class="tab-pane" id="products__price__gte__price__price__lte__price__post_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Media type</strong>: application/json</p><p><strong>Type</strong>: any</p><p><strong>Example</strong>:</p><div class="examples"><pre><code>{
+  "id": 10,
+  "name": "Pepe Jeans Men&#39;s Slim Fit Jeans",
+  "description": "Dive into the urban chic scene with these vapour black mid rise jeans, the ultimate wardrobe staple. Featuring a lightly faded denim design, these jeans redefine versatility, elevating your casual game effortlessly. Pair with a leather jacket to exude an aura of rugged elegance that&#39;s bound to leave an impression.",
+  "price": "35000.00",
+  "category": 
+    {
+      "id": 3,
+      "name": "Men&#39;s fashion"
+    },
+  "image_url": "https://images-eu.ssl-images-amazon.com/images/I/61Ho13ppUTL._AC_SR600,750,0,C_BR3_.jpg",
+  "stock_quantity": 34,
+  "reviews": [],
+  "images": [],
+  "created_date": "2024-10-12T12:40:34.789486Z"
+},
+{
+  "id": 3,
+  "name": "SLOVIC Swimming Shorts for Men | Swimming Costume for Men | Swimming Trunk, Boys Swim Suit for Men Easy Adjustable, Breathable, Quick Drying Shorts for Swimming, Running Sports Shorts",
+  "description": "100% CHLORINE RESISTANT: Made of poly spandex fabric, Slovic Swimming Trunks are designed to reduce friction and protect you from pool chemicals.",
+  "price": "15000.00",
+  "category": 
+    {
+      "id": 6,
+      "name": "Sports, Fitness, Bags, Luggage"
+    },
+  "image_url": "https://m.media-amazon.com/images/I/717uG2jo9yL._SX679_.jpg",
+  "stock_quantity": 16,
+  "reviews": [],
+  "images": [],
+  "created_date": "2024-10-12T12:23:09.859504Z"
+},
+{
+  "id": 11,
+  "name": "U.S. POLO ASSN. Men&#39;s Slim Jeans",
+  "description": "UDJENO1703_Mens Harold Slim Straight Light Wash Jeans",
+  "price": "30000.00",
+  "category":
+    {
+      "id": 3,
+      "name": "Men&#39;s fashion"
+    },
+  "image_url": "https://m.media-amazon.com/images/I/71B2HQt05KL._SX679_.jpg",
+  "stock_quantity": 29,
+  "reviews": [],
+  "images": [],
+  "created_date": "2024-10-12T12:42:14.079878Z"
+}
+</code></pre></div></div></div></div></div></div></div></div></div></div></div></div><div class="col-md-3"><div id="sidebar" class="hidden-print affix" role="complementary"><ul class="nav nav-pills nav-stacked"><li><a href="#products">/products</a></li><li><a href="#reviews_">/reviews/</a></li><li><a href="#categories_">/categories/</a></li><li><a href="#wishlist_">/wishlist/</a></li><li><a href="#product_images_">/product-images/</a></li><li><a href="#promotions_">/promotions/</a></li><li><a href="#products__id__purchase_">/products/{id}/purchase/</a></li><li><a href="#products__search__name__">/products/?search={name}/</a></li><li><a href="#products__search__category__name_">/products/?search={category__name}</a></li><li><a href="#products__price__gte__price__price__lte__price_">/products/?price__gte={price}&price__lte={price}</a></li></ul></div></div></div></div></body></html>

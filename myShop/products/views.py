@@ -19,12 +19,9 @@ class ProductViewSet(viewsets.ModelViewSet):
 
     @action(detail=True, methods=['post'])
     def purchase(self, request, pk=None):
-
-        """Handle product purchase and stock reduction"""
         
         product = self.get_object()  # Get the product by its ID
         quantity = request.data.get('quantity', 1)  # Get the purchase quantity (default is 1)
-
         try:
             quantity = int(quantity)
         except ValueError:
@@ -48,11 +45,18 @@ class ProductViewSet(viewsets.ModelViewSet):
             "product_details": ProductSerializer(product).data
         }, status=status.HTTP_200_OK)
 
-    #Creating filters and search
+    # Add filtering, search, and pagination capabilities
     filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
-    filterset_fields = ['category','price','stock_quantity']
-    search_fields = ['name','category_name']
-    ordering_fields = ['price', 'created_date']
+    search_fields = ['name', 'category__name'] # Enable searching by 'name' and 'category'
+    # Filtering products by price range and stock availability
+    filterset_fields = {
+        'price': ['gte', 'lte'],  # Filter by min_price and max_price
+        'stock_quantity': ['gt']  # Filter by stock availability
+    }
+    # Optional: Enable ordering by fields (e.g., price, name)
+    ordering_fields = ['price', 'name']
+    ordering = ['name']  # Default ordering
+
 
 #Category viewsets
 class CategoryViewSet(viewsets.ModelViewSet):

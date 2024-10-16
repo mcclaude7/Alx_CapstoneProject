@@ -333,7 +333,7 @@ description: 1.Product Management (CRUD)
           description: Internal Server Error - The server encountered an unexpected condition.
 
 
-description: 2.Review management (CRUD)
+##description 2.Review management (CRUD)
            
 /reviews/:
   get:
@@ -888,4 +888,162 @@ description: 7. Stock Management
         description: Not Found - No Product matches the given query..
       500:
         description: Internal Server Error - The server encountered an unexpected condition.        
-    
+
+description: 8. Search by product name 
+/products/?search={name}/:
+  post:
+    description: Search product by name
+    body:
+      application/json:
+        type: object
+        properties:
+          name:
+            type: string
+    responses:
+      200:
+        body:
+          application/json:
+            example: |
+              {
+                "id": 16,
+                "name": "lamp",
+                "description": "asjdkklmdklml",
+                "price": "12000.00",
+                "category": 
+                  {
+                    "id": 1,
+                    "name": "Home decor"
+                  },
+                "image_url": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/PDP-Highlight-Consumer-Laptop-Go-3-Platinum-001:VP1-539x440",
+                "stock_quantity": 20,
+                "reviews": [],
+                "images": [],
+                "created_date": "2024-10-15T10:44:14.498063Z"
+              }
+
+description: 8. Search by product category 
+/products/?search={category__name}:
+  post:
+    description: Search product by categories
+    body:
+      application/json:
+        type: object
+        properties:
+          category__name:
+            type: string
+    responses:
+      200:
+        body:
+          application/json:
+            example: |
+              {
+                "id": 7,
+                "name": "Fire-Boltt Ninja Call Pro Max 51.05mm (2.01 inch) Display Smart Watch, Bluetooth Calling, 120+ Sports Modes, Health Suite, Voice Assistance (Black)",
+                "description": "51.05mm (2.01 inch) Large display, 240*296 pixels resolution - Style meets technology in perfect harmony. Immerse yourself in the captivating world of the 51.05mm (2.01 inch) large display, and a brilliant resolution of 240*296 pixels. Every detail comes to life with exceptional clarity and vibrancy with 320 NITS Peak Brightness",
+                "price": "435361.00",
+                "category": 
+                  {
+                    "id": 2,
+                    "name": "Electronics"
+                  },
+                "image_url": "https://m.media-amazon.com/images/I/61fTfbdaszL._SX679_.jpg",
+                "stock_quantity": 34,
+                "reviews": [],
+                "images": [],
+                "created_date": "2024-10-12T12:35:21.847865Z"
+              },
+              {
+                "id": 6,
+                "name": "Hisense 108 cm (43 inches) E43N Series Full HD Smart Google LED TV 43E43N (Black)",
+                "description": "Resolution: Full HD (1920X1080) | Refresh Rate: 60 hertz\r\nConnectivity: 3 HDMI ports to connect set top box (1 HDMI port eARC supported) | 2 USB 2.0 ports to connect hard drives and other USB devices | Dual-Band WiFi (2.4G+5G) | Bluetooth 5.0 | 1 Ethernet RJ45 | 1 headphone Jack | 1 Optical Out | 1 Composite (AV) Inputs | 1 RF Tuner",
+                "price": "349000.00",
+                "category": 
+                  {
+                    "id": 2,
+                    "name": "Electronics"
+                  },
+                "image_url": "https://m.media-amazon.com/images/I/81ptdkfLeSL._SX679_.jpg",
+                "stock_quantity": 12,
+                "reviews": [],
+                "images": [],
+                "created_date": "2024-10-12T12:33:20.694371Z"
+              },
+              {
+                "id": 14,
+                "name": "Iphone",
+                "description": "dfklsaldk;k;skad;l dk;kasd;lk;l jd;k;lk;ld",
+                "price": "390777.00",
+                "category": 
+                  {
+                    "id": 2,
+                    "name": "Electronics"
+                  },
+                "image_url": null,
+                "stock_quantity": 37,
+                "reviews": [],
+                "images": [],
+                "created_date": "2024-10-13T12:28:38.010879Z"
+              }
+ 
+/products/?price__gte={price}&price__lte={price}:
+  post:
+    description: Filter product by price range
+    body:
+      application/json:
+        type: object
+        properties:
+          price:
+            type: number
+    responses:
+      200:
+        body:
+          application/json:
+            example: |
+              {
+                "id": 10,
+                "name": "Pepe Jeans Men's Slim Fit Jeans",
+                "description": "Dive into the urban chic scene with these vapour black mid rise jeans, the ultimate wardrobe staple. Featuring a lightly faded denim design, these jeans redefine versatility, elevating your casual game effortlessly. Pair with a leather jacket to exude an aura of rugged elegance that's bound to leave an impression.",
+                "price": "35000.00",
+                "category": 
+                  {
+                    "id": 3,
+                    "name": "Men's fashion"
+                  },
+                "image_url": "https://images-eu.ssl-images-amazon.com/images/I/61Ho13ppUTL._AC_SR600,750,0,C_BR3_.jpg",
+                "stock_quantity": 34,
+                "reviews": [],
+                "images": [],
+                "created_date": "2024-10-12T12:40:34.789486Z"
+              },
+              {
+                "id": 3,
+                "name": "SLOVIC Swimming Shorts for Men | Swimming Costume for Men | Swimming Trunk, Boys Swim Suit for Men Easy Adjustable, Breathable, Quick Drying Shorts for Swimming, Running Sports Shorts",
+                "description": "100% CHLORINE RESISTANT: Made of poly spandex fabric, Slovic Swimming Trunks are designed to reduce friction and protect you from pool chemicals.",
+                "price": "15000.00",
+                "category": 
+                  {
+                    "id": 6,
+                    "name": "Sports, Fitness, Bags, Luggage"
+                  },
+                "image_url": "https://m.media-amazon.com/images/I/717uG2jo9yL._SX679_.jpg",
+                "stock_quantity": 16,
+                "reviews": [],
+                "images": [],
+                "created_date": "2024-10-12T12:23:09.859504Z"
+              },
+              {
+                "id": 11,
+                "name": "U.S. POLO ASSN. Men's Slim Jeans",
+                "description": "UDJENO1703_Mens Harold Slim Straight Light Wash Jeans",
+                "price": "30000.00",
+                "category":
+                  {
+                    "id": 3,
+                    "name": "Men's fashion"
+                  },
+                "image_url": "https://m.media-amazon.com/images/I/71B2HQt05KL._SX679_.jpg",
+                "stock_quantity": 29,
+                "reviews": [],
+                "images": [],
+                "created_date": "2024-10-12T12:42:14.079878Z"
+              }
