@@ -58,7 +58,7 @@ class ProductViewSet(viewsets.ModelViewSet):
 class CategoryViewSet(viewsets.ModelViewSet):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
-    #permission_classes = [permissions.IsAuthenticated]
+    permission_classes = [permissions.IsAuthenticated]
 
 #Review viewsets
 class ReviewViewSet(viewsets.ModelViewSet):
@@ -88,7 +88,7 @@ class ProductImageViewSet(viewsets.ModelViewSet):
 class WishlistViewSet(viewsets.ModelViewSet):
     queryset = Wishlist.objects.all()
     serializer_class = WishlistSerializer
-    #permission_classes = IsAuthenticated
+    ##permission_classes = IsAuthenticated
 
 #Promotion viewsets
 class PromotionViewSet(viewsets.ModelViewSet):
@@ -101,3 +101,4 @@ class PromotionViewSet(viewsets.ModelViewSet):
 
 class APIDocumentationView(TemplateView):
     template_name = 'v1/documentation.html'
+
