@@ -7,8 +7,6 @@ mediaType: application/json
 description: 1.Product Management (CRUD)
 /products:
   get:
-    description: List all products
-    queryParameters:
       id:
         description: unique identifier of a product in database
         type: number     
@@ -204,8 +202,6 @@ description: 1.Product Management (CRUD)
                 "images": [],
                 "created_date": "2024-10-13T14:48:38.768706Z"
               }
-      #200:
-        #description: OK - The product purchase was successful, and stock has been updated.
       400:
         description: Bad Request - Invalid request.
       401:
@@ -332,9 +328,7 @@ description: 1.Product Management (CRUD)
         500:
           description: Internal Server Error - The server encountered an unexpected condition.
 
-
-##description 2.Review management (CRUD)
-           
+description: 2.Review Management (CRUD)
 /reviews/:
   get:
     description: List all products
@@ -474,9 +468,7 @@ description: 1.Product Management (CRUD)
       responses:
         204:
 
-
 description: 3.Category Management (CRUD)
-
 /categories/:
   get:
     description: List all categories
