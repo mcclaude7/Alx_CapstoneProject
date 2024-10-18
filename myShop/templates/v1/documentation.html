@@ -170,7 +170,118 @@ pre code {
 .required {
   color: #f00;
 }
-    </style></head><body data-spy="scroll" data-target="#sidebar"><div class="container"><div class="row"><div class="col-md-9" role="main"><div class="page-header"><h1>E-Commerce Product API <small>version v1</small></h1><p>http://localhost:8000/api/{version}</p><p>1.Product Management (CRUD)</p><ul><li><strong>version</strong>: <em><span class="required">required</span>(v1)</em></li></ul></div><div class="panel panel-default"><div class="panel-heading"><h3 id="products" class="panel-title">/products</h3></div><div class="panel-body"><div class="panel-group"><div class="panel panel-white resource-modal"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_products"><span class="parent"></span>/products</a> <span class="methods"><a href="#products_get"><span class="badge badge_get">get</span></a> <a href="#products_post"><span class="badge badge_post">post</span></a></span></h4></div><div id="panel_products" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#products_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"></div><div class="clearfix"></div></div><div onclick="window.location.href = '#products_post'" class="list-group-item"><span class="badge badge_post">post</span><div class="method_description"><p>Create a new product</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="products_get"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent"></span>/products</h4></div><div class="modal-body"><ul class="nav nav-tabs"></ul><div class="tab-content"></div></div></div></div></div><div class="modal fade" tabindex="0" id="products_post"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_post">post</span> <span class="parent"></span>/products</h4></div><div class="modal-body"><div class="alert alert-info"><p>Create a new product</p></div><ul class="nav nav-tabs"><li class="active"><a href="#products_post_request" data-toggle="tab">Request</a></li><li><a href="#products_post_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="products_post_request"><h3>Body</h3><p><strong>Media type</strong>: application/json</p><p><strong>Type</strong>: object</p><strong>Properties</strong><ul><li><strong>name</strong>: <em><span class="required">required</span>(string)</em></li><li><strong>description</strong>: <em><span class="required">required</span>(string)</em></li><li><strong>price</strong>: <em><span class="required">required</span>(number)</em></li><li><strong>category</strong>: <em><span class="required">required</span>(string)</em></li><li><strong>stock_quantity</strong>: <em><span class="required">required</span>(number)</em></li><li><strong>image_url</strong>: <em><span class="required">required</span>(string)</em></li></ul></div><div class="tab-pane" id="products_post_response"><h2>HTTP status code <a href="http://httpstatus.es/201" target="_blank">201</a></h2><h3>Body</h3><p><strong>Media type</strong>: application/json</p><p><strong>Type</strong>: any</p><p><strong>Example</strong>:</p><div class="examples"><pre><code>{
+    </style></head><body data-spy="scroll" data-target="#sidebar"><div class="container"><div class="row"><div class="col-md-9" role="main"><div class="page-header"><h1>E-Commerce Product API <small>version v1</small></h1><p>http://localhost:8000/api/{version}</p><p>1.Product Management (CRUD)</p><ul><li><strong>version</strong>: <em><span class="required">required</span>(v1)</em></li></ul></div><div class="panel panel-default"><div class="panel-heading"><h3 id="products" class="panel-title">/products</h3></div><div class="panel-body"><div class="panel-group"><div class="panel panel-white resource-modal"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_products"><span class="parent"></span>/products</a> <span class="methods"><a href="#products_get"><span class="badge badge_get">get</span></a> <a href="#products_post"><span class="badge badge_post">post</span></a></span></h4></div><div id="panel_products" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#products_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>1.Product Management (CRUD)</p></div><div class="clearfix"></div></div><div onclick="window.location.href = '#products_post'" class="list-group-item"><span class="badge badge_post">post</span><div class="method_description"><p>Create a new product</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="products_get"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent"></span>/products</h4></div><div class="modal-body"><div class="alert alert-info"><p>1.Product Management (CRUD)</p></div><ul class="nav nav-tabs"><li class="active"><a href="#products_get_request" data-toggle="tab">Request</a></li><li><a href="#products_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="products_get_request"><h3>Query Parameters</h3><ul><li><strong>id</strong>: <em><span class="required">required</span>(number)</em><p>unique identifier of a product in database</p></li><li><strong>name</strong>: <em><span class="required">required</span>(string)</em><p>name of the corresponding product</p></li><li><strong>description</strong>: <em><span class="required">required</span>(string)</em><p>the entire product desription</p></li><li><strong>Price</strong>: <em><span class="required">required</span>(number)</em><p>Price of product</p></li><li><strong>category</strong></li><li><strong>stock_quantity</strong>: <em><span class="required">required</span>(number)</em><p>the number of unit of a product</p></li><li><strong>Review</strong>: <em><span class="required">required</span>(dictionary)</em><p>feedback provided by a user or customer about a product</p></li><li><strong>images</strong>: <em><span class="required">required</span>(string)</em><p>Images related to the corresponding product</p></li><li><strong>created_date</strong>: <em><span class="required">required</span>(string)</em><p>indicate when a product has been recorded</p></li></ul></div><div class="tab-pane" id="products_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><h3>Body</h3><p><strong>Media type</strong>: application/json</p><p><strong>Type</strong>: any</p><p><strong>Example</strong>:</p><div class="examples"><pre><code>[
+  {
+
+    "id": 1,
+    "name": "JUST RIDER Men&#39;s Gym Shorts/mens sports shorts/running shorts for men",
+    "description": "Suitable for any circumstance.Good choice for indoor and outdoor activities.Such as Walking,Running,Gym,Traveling,Mountaineering,Hiking or at Home,etc",
+    "price": "12000.00",
+    "category": 
+      {
+        "id": 6,
+        "name": "Sports, Fitness, Bags, Luggage"
+      },
+    "image_url": "https://m.media-amazon.com/images/I/6120wM2Z+-L._SY879_.jpg",
+    "stock_quantity": 5,
+    "reviews": 
+      [
+
+         {
+           "id": 1,
+           "user": 1,
+           "product": 1,
+           "rating": 4,
+           "comment": "Nziza cyane",
+           "created_at": "2024-10-12T12:51:39.966398Z"
+          }
+      ],
+    "images": 
+      [
+
+          {
+            "id": 1,
+            "product": 1,
+            "image_url": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/8e081c80-d12e-4655-bbbf-eb6aa6b81479.__CR0,0,1080,1080_PT0_SX300_V1___.png"
+          },
+          {
+            "id": 2,
+            "product": 1,
+            "image_url": "https://m.media-amazon.com/images/I/71lgOm5F8sL._SX679_.jpg"
+          },
+          {                        
+            "id": 3,
+            "product": 1,
+            "image_url": "https://m.media-amazon.com/images/I/513R2m39cEL._SY879_.jpg"
+          },
+          {
+            "id": 4,
+            "product": 1,
+            "image_url": "https://m.media-amazon.com/images/I/61jyIVEVtiL._SX679_.jpg"
+          }
+      ],
+    "created_date": "2024-10-12T12:12:35.323105Z"
+  },
+  {
+    "id": 3,
+    "name": "SLOVIC Swimming Shorts for Men | Swimming Costume for Men | Swimming Trunk, Boys Swim Suit for Men Easy Adjustable, Breathable, Quick Drying Shorts for Swimming, Running Sports Shorts",
+    "description": "100% CHLORINE RESISTANT: Made of poly spandex fabric, Slovic Swimming Trunks are designed to reduce friction and protect you from pool chemicals.",
+    "price": "12000.00",
+    "category": 
+      {
+        "id": 6,
+        "name": "Sports, Fitness, Bags, Luggage"
+      },
+    "image_url": "https://m.media-amazon.com/images/I/717uG2jo9yL._SX679_.jpg",
+    "stock_quantity": 16,
+    "reviews": [],
+    "images": [],
+    "created_date": "2024-10-12T12:23:09.859504Z"
+  },
+  {
+    "id": 4,
+    "name": "Samsung Galaxy M55s 5G (Coral Green,8GB RAM,128GB Storage)",
+    "description": "DISPLAY - 16.95 Centimeters (6.7&#92;"Inch) Super AMOLED Plus Display with 19.5:9 Aspect Ratio, FHD+ Resolution with 1080 x 2400 Pixels , 394 PPI with 16M Colors and 120Hz Refresh Rate",
+    "price": "345000.00",
+    "category": 
+      {
+        "id": 5,
+        "name": "Mobiles, Laptops"
+      },
+    "image_url": "https://m.media-amazon.com/images/I/41iXRIjYK5L._SX300_SY300_QL70_FMwebp_.jpg",
+    "stock_quantity": 22,
+    "reviews": 
+      [
+        {
+          "id": 2,
+          "user": 3,
+          "product": 4,
+           "rating": 5,
+           "comment": "narayiguze narayiguzw narayiguzw a arayiguze narayiguzw narayiguzwrayiguze narayiguzw narayiguzw arayiguze narayiguzw narayiguzw arayiguze narayiguzw narayiguzw arayiguze narayiguzw narayiguzw",
+           "created_at": "2024-10-12T13:01:56.567341Z"
+        }
+      ],
+    "images": [],
+    "created_date": "2024-10-12T12:26:25.734988Z"
+  },
+  {
+    "id": 5,
+    "name": "Spigen Ez Fit Tempered Glass Screen Protector Guard For Iphone 15 Pro Smartphone - 2 Pack",
+    "description": "Compatibility ; Glass Screen Protector Compatible with iPhone 15 Pro&#92;r&#92;n9H Hardness ; Tempered glass durability rated at 9H hardness to protect from everyday scratches&#92;r&#92;nCase Friendly ; Made case compatible with Spigen case&#92;r&#92;nOil-free ; Oleophobic coating for daily fingerprint resistance&#92;r&#92;nCrystal Clear ; Extreme clarity preserves the original screen brightness",
+    "price": "10000.00",
+    "category": 
+      {
+        "id": 5,
+        "name": "Mobiles, Laptops"
+      },
+    "image_url": "https://m.media-amazon.com/images/I/71dDhHnvNEL._SX679_.jpg",
+    "stock_quantity": 24,
+    "reviews": [],
+    "images": [],
+    "created_date": "2024-10-12T12:29:44.719726Z"
+  }
+]
+</code></pre></div><h2>HTTP status code <a href="http://httpstatus.es/400" target="_blank">400</a></h2><p>Bad Request - invalid request.</p><h2>HTTP status code <a href="http://httpstatus.es/401" target="_blank">401</a></h2><p>Unauthorized - Authentication credential were not provided.</p><h2>HTTP status code <a href="http://httpstatus.es/404" target="_blank">404</a></h2><p>Not found - No product were found.</p><h2>HTTP status code <a href="http://httpstatus.es/500" target="_blank">500</a></h2><p>Internal Server Error - The server encountered an unexpected condition.</p></div></div></div></div></div></div><div class="modal fade" tabindex="0" id="products_post"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_post">post</span> <span class="parent"></span>/products</h4></div><div class="modal-body"><div class="alert alert-info"><p>Create a new product</p></div><ul class="nav nav-tabs"><li class="active"><a href="#products_post_request" data-toggle="tab">Request</a></li><li><a href="#products_post_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="products_post_request"><h3>Body</h3><p><strong>Media type</strong>: application/json</p><p><strong>Type</strong>: object</p><strong>Properties</strong><ul><li><strong>name</strong>: <em><span class="required">required</span>(string)</em></li><li><strong>description</strong>: <em><span class="required">required</span>(string)</em></li><li><strong>price</strong>: <em><span class="required">required</span>(number)</em></li><li><strong>category</strong>: <em><span class="required">required</span>(string)</em></li><li><strong>stock_quantity</strong>: <em><span class="required">required</span>(number)</em></li><li><strong>image_url</strong>: <em><span class="required">required</span>(string)</em></li></ul></div><div class="tab-pane" id="products_post_response"><h2>HTTP status code <a href="http://httpstatus.es/201" target="_blank">201</a></h2><h3>Body</h3><p><strong>Media type</strong>: application/json</p><p><strong>Type</strong>: any</p><p><strong>Example</strong>:</p><div class="examples"><pre><code>{
   "id": 15,
   "name": "hello",
   "description": "hello bb",

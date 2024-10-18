@@ -21,7 +21,7 @@ class Product(models.Model):
     def __str__(self):
         return self.name
 
-        
+       
 # Creating a review model
 class Review(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)

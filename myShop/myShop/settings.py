@@ -88,13 +88,22 @@ DATABASES = {
         "PASSWORD": "Kabe@9168Clde",
         "HOST": "127.0.0.1",
         "PORT": "3306",
-        "OPTIONS": {
-            'unix_socket': '/var/run/mysqld/mysqld.sock',  # Update this path if necessary
-        },
-
     }
 }
+#DATABASES = {
+ #   'default': {
+  #      'ENGINE': 'django.db.backends.mysql',
+   #     'NAME': 'mcclaude$default',
+    #    "USER": "mcclaude",
+     #   "PASSWORD": "Kabe@9168Clde",
+      #  "HOST": "mcclaude.mysql.pythonanywhere-services.com",
+       # "PORT": "3306",
+        #"OPTIONS": {
+          #  'init_command': "SET sql_mode='STRIC_TRANS_TABLES'",  # Update this path if necessary
+       # },
 
+#    }
+#}
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
@@ -143,10 +152,8 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ),
-    #'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
-    #'PAGE_SIZE': 4
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 10,
+    'PAGE_SIZE': 4,
 }
 REST_AUTH = {
     'USE_JWT': True,

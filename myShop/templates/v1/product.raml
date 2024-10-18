@@ -7,6 +7,9 @@ mediaType: application/json
 description: 1.Product Management (CRUD)
 /products:
   get:
+    description: 1.Product Management (CRUD)
+    queryParameters: 
+          
       id:
         description: unique identifier of a product in database
         type: number     
@@ -34,7 +37,7 @@ description: 1.Product Management (CRUD)
       images:
         description: Images related to the corresponding product
         type: string
-      ctreated_date:
+      created_date:
         description: indicate when a product has been recorded
         type: string
     responses:
