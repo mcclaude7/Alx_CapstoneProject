@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-kb3swn98-8+9aj*mis1yw(7_oa0mpme&!qw!pxt@=8c5v+xk8@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['mcclaude.pythonanywhere.com']
+ALLOWED_HOSTS = ['mcclaude.pythonanywhere.com','127.0.0.1']
 
 
 # Application definition
@@ -88,6 +88,9 @@ DATABASES = {
         "PASSWORD": "Kabe@9168Clde",
         "HOST": "localhost",
         "PORT": "3306",
+        "OPTIONS": {
+            'unix_socket': '/var/run/mysqld/mysqld.sock',  # Update this path if necessary
+        },
 
     }
 }
