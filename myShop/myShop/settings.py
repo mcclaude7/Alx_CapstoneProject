@@ -86,7 +86,7 @@ DATABASES = {
         'NAME': 'alx_capstone_db',
         "USER": "root",
         "PASSWORD": "Kabe@9168Clde",
-        "HOST": "localhost",
+        "HOST": "127.0.0.1",
         "PORT": "3306",
         "OPTIONS": {
             'unix_socket': '/var/run/mysqld/mysqld.sock',  # Update this path if necessary
